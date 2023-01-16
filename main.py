@@ -14,14 +14,14 @@ engine.setProperty('rate', 150) # 150 words per minute
 #Fix the encrypt/decrypt
 
 ascii_art = """ 
-  _____ _             _ _   _           _                       _ _   _        _              _ 
-  / ____| |           | | | | |         ( )                     | | | (_)      | |            | |
- | (___ | |_ ___  __ _| | |_| |__  _   _|/ ___   _ __ ___  _   _| | |_ _ ______| |_ ___   ___ | |
-  \___ \| __/ _ \/ _` | | __| '_ \| | | | / __| | '_ ` _ \| | | | | __| |______| __/ _ \ / _ \| |
-  ____) | ||  __/ (_| | | |_| | | | |_| | \__ \ | | | | | | |_| | | |_| |      | || (_) | (_) | |
- |_____/ \__\___|\__,_|_|\__|_| |_|\__, | |___/ |_| |_| |_|\__, |_|\__|_|       \__\___/ \___/|_|
-                                    __/ |                   __/ |                                
-                                   |___/                   |___/                                 """
+   _____                      _    _____                  
+  / ____|                    | |  / ____|                 
+ | (___  _ __ ___   __ _ _ __| |_| (___  _   _ _ __   ___ 
+  \___ \| '_ ` _ \ / _` | '__| __|\___ \| | | | '_ \ / __|
+  ____) | | | | | | (_| | |  | |_ ____) | |_| | | | | (__ 
+ |_____/|_| |_| |_|\__,_|_|   \__|_____/ \__, |_| |_|\___|
+                                          __/ |           
+                                         |___/              """
 
 
 
@@ -213,6 +213,15 @@ def knowing():
 
 
 
+def quotes():
+    with open("quotes.txt") as f:
+        lines = f.readlines()
+    line = random.choice(lines)
+    engine.say(line)
+    engine.runAndWait()
+    main()
+
+
 
 
 
@@ -229,7 +238,8 @@ def main():
       print("6. Open Youtube")
       print("7. Remember")
       print("8. Knowing")
-      print("9. Goodbye")
+      print("9. Quotes")
+      print("10. Goodbye")
       choice = input("Enter the number of your selection: ")
       if choice == "1":
             converter()
@@ -248,6 +258,8 @@ def main():
       elif choice == "8":
             knowing()
       elif choice == "9":
+            quotes()
+      elif choice == "10":
             good_bye()
       else:
             print("Invalid Selection, Please try again")
