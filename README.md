@@ -5,5 +5,6 @@ SmartSync is just a project of mine I have to learn to code in python. got the i
 
 
 To do list:
-adding TTS to all commands
-adding Voice recognition 
+Adding TTS to all commands
+
+Adding Voice recognition 
