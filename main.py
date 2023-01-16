@@ -85,43 +85,58 @@ def create_file():
             f = open('new_file.txt', 'w')
             f.write(input("File content:"))
             f.close()
+            engine.say(choice)
+            engine.runAndWait
             main()
       elif choice == "N":
             main()
       else:
             print("Invalid choice. Please enter 'Y' or 'N'.")
-            create_file()
+            main()
 
 
 
 def delete_file():
       choice = input("Are you sure you want to remove the following file? (Y/N): ")
       if choice == "Y":
+            engine.say(choice)
+            engine.runAndWait()
             os.remove(input('FileName: '))
       if choice == "N":
             main()
       else:
-            print("The following file doesnt Exist")
-            main()
+           say = print("The following file doesnt Exist")
+           engine.say(say)
+           engine.runAndWait
+      main()
 
 
     
 def rename_file():
       choice = input("Are you sure you want to rename the following file? (Y/N): ")
       if choice == "Y":
+            engine.say(choice)
+            engine.runAndWait()
             os.rename(input('OLDNAME.txt: '), input('NEW_NAME.txt: '))
       elif choice == "N":
             main()
       else:
-            print("Invalid choice. Please enter 'Y' or 'N'.")
-            rename_file()
+            output = print("Invalid choice. Please enter 'Y' or 'N'.")
+            engine.say(output)
+            engine.runAndWait()
+            main()
 
 
 
 
 def good_bye():
       choice = input("Are you sure you wish to leave? (Y/N): ")
+      engine.say(choice)
+      engine.runAndWait()
       if choice == "Y":
+        output = ("goodbye")
+        engine.say(output)
+        engine.runAndWait()
         exit()
       elif choice == "N":
         main()
@@ -153,10 +168,15 @@ def password_generator():
         return password
 
     length = input("Enter the desired password length: ")
+    engine.say(length)
+    engine.runAndWait
 
     password = generate_password(int(length))
-    print(f"Your password is: {password}")
-    password_generator()
+    output = print(f"Your password is: {password}")
+    engine.say(output)
+    engine.runAndWait()
+    main()
+
 
 
 
@@ -165,6 +185,7 @@ def youtube():
       output = ("Opening Youtube.com")
       engine.say(output)
       engine.runAndWait()
+      main()
 
 
 
@@ -232,9 +253,3 @@ def main():
             print("Invalid Selection, Please try again")
       
 main()
-
-
-
-
-    
-    
