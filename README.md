@@ -7,3 +7,8 @@ setup:
 simply download the file and open it
 
 then just start the code using any editor (Preferbly VS code)
+
+
+To Do:
+
+Currently trying to add Voice recognition
