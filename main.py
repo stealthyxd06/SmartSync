@@ -213,6 +213,17 @@ def knowing():
 
 
 
+def quotes():
+      with open("quotes.txt") as f:
+            lines = f.readlines()
+      line = random.choice(lines)
+      output = print(line)
+      engine.say(output)
+      engine.runAndWait()
+      main()
+
+
+
 
 
 
@@ -229,7 +240,8 @@ def main():
       print("6. Open Youtube")
       print("7. Remember")
       print("8. Knowing")
-      print("9. Goodbye")
+      print("9. Quotes")
+      print("10. Goodbye")
       choice = input("Enter the number of your selection: ")
       if choice == "1":
             converter()
@@ -248,8 +260,16 @@ def main():
       elif choice == "8":
             knowing()
       elif choice == "9":
+            quotes()
+      elif choice == "10":
             good_bye()
       else:
             print("Invalid Selection, Please try again")
       
 main()
+
+
+
+
+    
+    
