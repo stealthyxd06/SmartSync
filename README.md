@@ -11,4 +11,11 @@ then just start the code using any editor (Preferbly VS code)
 
 To Do:
 
-Currently trying to add Voice recognition
+Voice recognition
+
+Automatic task scheduling, and ability to set reminders
+
+Integration with various APIs and services (such as weather, news, and calendar) to provide information and perform tasks
+
+A simple user interface, such as a command line interface (CLI) or a graphical user interface (GUI).
+
