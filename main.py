@@ -5,12 +5,16 @@ import time
 import webbrowser
 import subprocess
 import pyttsx3
+import datetime
+import speech_recognition as sr
 from requests import get
-#pyttsx3 function
+
+#speech and recognition function
 
 engine = pyttsx3.init()
 engine.setProperty('rate', 150) # 150 words per minute
 
+r = sr.Recognizer()
 
 
 
@@ -82,6 +86,13 @@ login()
     
     
 #all command functions#
+
+
+
+
+
+
+
 
 
 def create_file():
@@ -232,6 +243,38 @@ def quotes():
     engine.runAndWait()
     main()
 
+
+def cmd():
+      os.system('start cmd')
+      output = print("Opening CMD")
+      engine.say(output)
+      engine.runAndWait
+      
+      
+def whatsmyip():
+      ip = get('https://api.ipify.org').text
+      output = ("This is your ip" + {ip})
+      engine.say(output)
+      engine.runAndWait()
+
+
+#NOT ADDED#
+def school():
+      teams_path = "C:/Users/WIJA0601/AppData/Local/Microsoft/Teams"
+      chrome_path = youtube()
+      word_path = "C:/ProgramData/Microsoft/Windows/Start Menu/Programs/word.exe"
+      subprocess.Popen([word_path])
+      subprocess.Popen([teams_path])
+      subprocess.Popen([chrome_path])
+      main()
+
+
+
+
+
+
+
+
 #Main part of the script
 
 def main():
@@ -248,7 +291,7 @@ def main():
       print("9. Quotes")
       print("10. Whats my IP")
       print("11. Open CMD")
-      print("12. Goodbye")
+      print("13. Goodbye")
       choice = input("Enter the number of your selection: ")
       if choice == "1":
             converter()
