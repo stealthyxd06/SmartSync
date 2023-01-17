@@ -232,33 +232,6 @@ def quotes():
     engine.runAndWait()
     main()
 
-
-
-#NOT ADDED#
-def school():
-      teams_path = "C:/Users/WIJA0601/AppData/Local/Microsoft/Teams"
-      chrome_path = youtube()
-      word_path = "C:/ProgramData/Microsoft/Windows/Start Menu/Programs/word.exe"
-      subprocess.Popen([word_path])
-      subprocess.Popen([teams_path])
-      subprocess.Popen([chrome_path])
-      main()
-
-def cmd():
-      os.system('start cmd')
-      output = print("Opening CMD")
-      engine.say(output)
-      engine.runAndWait
-
-def whatsmyip():
-      ip = get('https://api.ipify.org').text
-      output = ("This is your ip" + {ip})
-      engine.say(output)
-      engine.runAndWait()
-
-
-
-
 #Main part of the script
 
 def main():
