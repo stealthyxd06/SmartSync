@@ -8,6 +8,8 @@ simply download the file and open it
 
 then just start the code using any editor (Preferbly VS code)
 
+also change the path to your path as it can be diffrent for each person.
+
 
 To Do:
 
